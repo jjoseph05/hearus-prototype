@@ -3,6 +3,8 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.1.3"
+gem 'haml', '~> 4.0.5'
+gem 'bourbon'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
