@@ -1,0 +1,22 @@
+.container
+  %section.landing-page
+    .logo
+      %p Your voice being heard on issues that you care about
+    .issues-search
+      %form{"accept-charset" => "UTF-8", action: "/bills/find", method: "get"}
+        %div
+          %input{name: "utf8", type: "hidden", value: "✓"}/
+        %label{for: "search"}
+        %input#search{autofocus: "autofocus", name: "search", placeholder: "Find an Issue", required: "required", type: "text"}/
+        %input.button{name: "commit", type: "submit", value: "Search"}/
+    .zipcode-search
+      %form{"accept-charset" => "UTF-8", action: "/districts/set", method: "post"}
+        %div
+          %input{name: "utf8", type: "hidden", value: "✓"}/
+          %input{name: "authenticity_token", type: "hidden", value: "ZeSoxgtdnhrnPW/EeD+Bg2J1jxXgjDUzvx/E4z4Bwok="}/
+        %label{for: "zipcode"}
+        %input#zipcode.step1{maxlength: "5", name: "zipcode", pattern: "[0-9]{5}", placeholder: "Zip Code", required: "required", size: "12", type: "text"}/
+        %input.button{name: "commit", type: "submit", value: "Go"}/
+    .privacy-policy
+      %span
+        %a{href: "#"} privacy policy
