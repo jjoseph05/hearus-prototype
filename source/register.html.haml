@@ -1,0 +1,30 @@
+%div
+  %h2 HearUs
+  %p
+    %a.start-register-tour{href: "#"}
+      %span.icon-stack
+        %i.icon-circle-blank.icon-stack-base
+        %i.icon-question
+  %p
+    Login with:
+    %a{href: "/auth/twitter", style: "text-decoration:none;"}
+      %span.icon-stack
+        %i.icon-check-empty.icon-stack-base
+        %i.icon-twitter
+    %a{href: "/auth/facebook", style: "text-decoration:none;"}
+      %span.icon-stack
+        %i.icon-check-empty.icon-stack-base
+        %i.icon-facebook
+    %br/
+    Or register your email with us:
+  %form#new_regular_user.pure-form.pure-form-stacked{"accept-charset" => "UTF-8", action: "/users", method: "post"}
+    %div{style: "margin:0;padding:0;display:inline"}
+      %input{name: "utf8", type: "hidden", value: "✓"}
+      %input{name: "authenticity_token", type: "hidden", value: "GZCHJmwCK/knPeO5hiayOTvtiFlhZNHOnyjhLx/6QDc="}
+    %label{for: "regular_user_email"} Email
+    %input#regular_user_email.step1{autofocus: "autofocus", name: "regular_user[email]", placeholder: "Email", size: "30", type: "text"}
+    %label{for: "regular_user_password"} Password
+    %input#regular_user_password{name: "regular_user[password]", placeholder: "Password", size: "30", type: "password"}
+    %label{for: "regular_user_password_confirmation"} Confirm Password
+    %input#regular_user_password_confirmation{name: "regular_user[password_confirmation]", placeholder: "Password Confirmation", size: "30", type: "password"}
+    %input.pure-button.pure-button-primary{name: "commit", type: "submit", value: "Register"}

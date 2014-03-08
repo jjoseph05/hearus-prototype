@@ -1,0 +1,25 @@
+%div
+.login-page
+  %h2 HearUs
+  %a.start-login-tour{href: "#"}
+    %span.icon-stack
+      %i.icon-circle-blank.icon-stack-base
+      %i.icon-question
+  %a{href: "/auth/twitter", style: "text-decoration:none;"}
+    %span.icon-stack
+      %i.icon-check-empty.icon-stack-base
+      %i.icon-twitter
+  %a{href: "/auth/facebook", style: "text-decoration:none;"}
+    %span.icon-stack
+      %i.icon-check-empty.icon-stack-base
+      %i.icon-facebook
+  %form{"accept-charset" => "UTF-8", action: "/sessions", method: "post"}
+    %div{style: "margin:0;padding:0;display:inline"}
+      %input{name: "utf8", type: "hidden", value: "✓"}
+      %input{name: "authenticity_token", type: "hidden", value: "GZCHJmwCK/knPeO5hiayOTvtiFlhZNHOnyjhLx/6QDc="}
+    %label{for: "email"} Email
+    %input#email.step1{autofocus: "autofocus", name: "email", placeholder: "Email Address", type: "text"}
+    %br
+    %label{for: "password"} Password
+    %input#password{name: "password", placeholder: "Password", type: "password"}
+    %input{name: "commit", type: "submit", value: "Sign In"}
