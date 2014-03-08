@@ -3,21 +3,23 @@
   %head
     %title The HearUs Project
     %link(rel="stylesheet" href="stylesheets/normalize.css")
-    %link(rel="stylesheet" href="stylesheets/all.css")
+    %link(rel="stylesheet" href="stylesheets/style.css")
     %script{src: "https://www.google.com/jsapi", type: "text/javascript"}
     %meta{content: "authenticity_token", name: "csrf-param"}
     %meta{content: "ZeSoxgtdnhrnPW/EeD+Bg2J1jxXgjDUzvx/E4z4Bwok=", name: "csrf-token"}
   %body{class: page_classes}
-    .page-container
+    %section.container
       %header
         %h1 HearUs
         %nav
           .logbar
-            %a{href: "/users/new"} Register
-            %a{href: "/sessions/new"} Login
+            %a{} Register
+            %a{} Login
+            %a{} About
+            %a{} Mission
       = yield
 
       %footer
-        %nav
-          %a{href: "/about", html: "{:class=>\"start-tour\"}"} About
-          %a{href: "/about", html: "{:class=>\"start-tour\"}"} Mission
+        .privacy-policy
+          %span
+            %a{href: "#"} privacy policy
