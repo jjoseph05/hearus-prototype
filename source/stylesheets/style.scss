@@ -8,6 +8,11 @@
 }
 /* Base
 ======================================================= */
+$darkblue: rgba(40, 27, 89, 1);
+$blue: rgba(56, 36, 115, 1);
+$white: rgba(242, 242, 242, 1);
+$red: rgba(217, 36, 20, 1);
+$lightred: rgba(95, 35, 21, 1);
 
 html{ 
   font-size: 16px;
@@ -33,17 +38,21 @@ header{
   background-color: lightblue;
 }
 
-header nav {
+header h1{
+  margin:0;
+}
+
+nav{
   background-color: lightpink;
 }
 
 .container{
-  background-color: red;
+  background-color: orange;
   padding: 0;
 }
 
-.logo{
-  background-color: cyan;
+.hero{
+  outline: 1px solid blue;
 }
 .search{
   background-color: magenta;
