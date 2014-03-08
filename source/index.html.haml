@@ -6,7 +6,7 @@
     %input{autofocus: "autofocus", placeholder: "Find an Issue", type: "text"}
     %input{type: "submit", value: "Search"}
 .search.zipcodes
-  %form{action: "/districts"}
+  %form{action: "/finddistrict.html"}
     %label{for: "zipcode"}
     %input{maxlength: "5", name: "zipcode", pattern: "[0-9]{5}", placeholder: "Zip Code", size: "12", type: "text"}
     %input.button{name: "commit", type: "submit", value: "Go"}
