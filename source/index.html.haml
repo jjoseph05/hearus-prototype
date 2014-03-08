@@ -1,17 +1,12 @@
-.logo
+.hero
   %p Your voice being heard on issues that you care about
 .search.issues
-  %form{action: "/bills/find", method: "get"}
-    / %div
-    /   %input{name: "utf8", type: "hidden", value: "✓"}
+  %form{action: "/bills.html"}
     %label{for: "search"}
-    %input{autofocus: "autofocus", name: "search", placeholder: "Find an Issue", required: "required", type: "text"}/
-    %input{name: "commit", type: "submit", value: "Search"}/
+    %input{autofocus: "autofocus", placeholder: "Find an Issue", type: "text"}
+    %input{type: "submit", value: "Search"}
 .search.zipcodes
-  %form{action: "/districts/set", method: "post"}
-    / %div
-    /   %input{name: "utf8", type: "hidden", value: "✓"}
-    /   %input{name: "authenticity_token", type: "hidden", value: "ZeSoxgtdnhrnPW/EeD+Bg2J1jxXgjDUzvx/E4z4Bwok="}
+  %form{action: "/districts"}
     %label{for: "zipcode"}
-    %input{maxlength: "5", name: "zipcode", pattern: "[0-9]{5}", placeholder: "Zip Code", required: "required", size: "12", type: "text"}/
-    %input.button{name: "commit", type: "submit", value: "Go"}/
+    %input{maxlength: "5", name: "zipcode", pattern: "[0-9]{5}", placeholder: "Zip Code", size: "12", type: "text"}
+    %input.button{name: "commit", type: "submit", value: "Go"}
