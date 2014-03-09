@@ -27,19 +27,36 @@ h1, h2, h3, h4, h5, h6, label {
   font-weight: 400; 
 }
 
-::selection { background:#FF5E99; } /* Safari */ 
+::selection { background:$blue;} /* Safari */ 
 
-::-moz-selection { background: #FF5E99; } /* Firefox */ 
+::-moz-selection { background: lightblue; } /* Firefox */ 
 
-a { text-decoration: none; color:#444; font-family: 'Open Sans', sans-serif;}
+a { 
+  text-decoration: none; 
+  color:#444; 
+  font-family: 'Open Sans', sans-serif;}
 
-a:hover { text-decoration: none; }
+a:hover { text-decoration: underline; }
 
+p {
+  text-align: left;
+  /*padding: 0 5%;*/
+}
+
+.open-congress{
+  display: inline-block;
+  background-color: $blue;
+  font-size: 1.25em;
+  width: 100%;
+  color: #fff;
+  letter-spacing: .075em
+}
 header {
   width: 100%;
   display: inline-block;
   background-color: $red;
   position: relative;
+  border-bottom: 1px solid #fff;
 }
 nav a {
   color: #fff;
@@ -47,8 +64,8 @@ nav a {
 ul, li {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  width: 100%
+  padding: .2em 0;
+  width: 100%;
 }
 
 header h1 {
@@ -57,6 +74,11 @@ header h1 {
   float:left;
   padding: .2em .4em;
   color: #fff;
+}
+header li{
+  margin-top:.1em;
+  padding: .8em;
+  border-top: 1px solid #fff;
 }
 /* Menu */
 .menu-container{
@@ -81,17 +103,17 @@ header h1 {
   top: 1em;
   width: 2em;
   height: 0.2em;
-  background: black;
+  background: #fff;
   box-shadow: 
-    0 0.5em 0 0 black,
-    0 1em 0 0 black;
+    0 0.5em 0 0 #fff,
+    0 1em 0 0 #fff;
 }
 
 header nav{
   background-color: $red;
   clear:both;
+  overflow: hidden;
   line-height: 1.5em;
-  margin-bottom: .347em;
   height:0;
 }
 .visible{
@@ -103,21 +125,103 @@ header nav{
   padding: 0;
 }
 
+.page-container{
+  padding: 0 5%;
+  margin-bottom: 1.25em;
+}
+
 .hero {
   padding: .1em;
   /*outline: 1px solid blue;*/
+}
+.bill-search{
+  padding: 0 5%;
 }
 .search{
   /*background-color: lightpink;*/
   padding: 1.5em;
 }
 
+hr {
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  border: 0;
+  clear:both;
+  display: inline-block;
+  height: 1px;
+  margin-top: 1em;
+  width: 100%;
+}
 
 /* *---------->>> _FORMS <<<-----------*/
+
+label {
+  display: inline-block;
+  /*font-size: 1.25em;*/
+  width: 100%;
+  padding-left: 5%;
+  overflow: hidden;
+  /*position: absolute;*/
+  text-align: left;
+  display: none;
+}
+
+input{
+  position: relative;
+  display:inline-block;
+  width: 100%;
+  padding: .2em;
+  margin-bottom: 0;
+    &:focus {
+      outline: none;
+      border: 1px solid $darkblue; 
+    }
+}
+input[type="submit"], button{
+  margin-top: .75em;
+  margin-bottom: .5em;
+  border-radius: .25em;
+  letter-spacing: .2em;
+  padding: .2em .3em;
+  background-color: $darkblue;
+  color: #fff;
+    
+    &:focus {
+      outline: none;
+      border: 1px solid $blue;
+      background-color: $blue;
+    }
+
+    &:hover{
+      border: 1px solid $blue;
+      background-color: $darkblue;
+      opacity: .9;
+    }
+    
+    &:active{
+      background-color: $darkblue;
+    }
+}
+
+.legislators li {
+  display: inline;
+}
+
+.legislators a {
+  text-align: left;
+}
+
+.keywords li, .sources li, .legis-history li{
+  display: inline;
+}
+/* *---------->>> _FOOTER <<<-----------*/
 footer{
   background-color:$blue;
   opacity:.9;
   padding: 1em 0;
+  display: none;
 }
 
 footer li {
