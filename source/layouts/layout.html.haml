@@ -7,7 +7,8 @@
     %link(rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css")
     %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans")
     %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Vollkorn")
-    %script(src="https://www.google.com/jsapi" type="text/javascript")
+    %script(type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js")
+    %script(src="javascripts/all.js" type="text/javascript")
     %meta{content: "authenticity_token", name: "csrf-param"}
     %meta{content: "ZeSoxgtdnhrnPW/EeD+Bg2J1jxXgjDUzvx/E4z4Bwok=", name: "csrf-token"}
   %body{class: page_classes}
@@ -15,8 +16,8 @@
       %header
         %a{href: "/index.html"}
           %h1 HearUs
-        .menu-container
-          %a#menu.box-shadow-menu{href: "#"}
+        #toggle.menu-container
+          %a.box-shadow-menu{href: "#"}
         %nav
           %ul
             %li
@@ -32,6 +33,6 @@
               %a{} About
             %li
               %a{} Mission
-        .privacy-policy
-          %span
-            %a{href: "#"} privacy policy
+        / .privacy-policy
+        /   %span
+        /     %a{href: "#"} privacy policy

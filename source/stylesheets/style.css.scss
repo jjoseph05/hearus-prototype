@@ -38,10 +38,12 @@ a:hover { text-decoration: none; }
 header {
   width: 100%;
   display: inline-block;
-  background-color: lightblue;
+  background-color: $red;
   position: relative;
 }
-
+nav a {
+  color: #fff;
+}
 ul, li {
   list-style-type: none;
   margin: 0;
@@ -54,6 +56,7 @@ header h1 {
   display: inline-block;
   float:left;
   padding: .2em .4em;
+  color: #fff;
 }
 /* Menu */
 .menu-container{
@@ -85,11 +88,14 @@ header h1 {
 }
 
 header nav{
-  background-color: lightblue;
+  background-color: $red;
   clear:both;
   line-height: 1.5em;
   margin-bottom: .347em;
-  /*display:none;*/
+  height:0;
+}
+.visible{
+  height: auto;
 }
 
 .container{
@@ -109,14 +115,16 @@ header nav{
 
 /* *---------->>> _FORMS <<<-----------*/
 footer{
-  background-color:$red;
+  background-color:$blue;
   opacity:.9;
+  padding: 1em 0;
 }
-footer
+
 footer li {
-  display: inline;
+  display: inline-block;
   color: #fff;
+  width: 33%;
 }
 footer a{
-  color: #fff;
+  color: rgba(0,0,0,1);
 }
