@@ -4,22 +4,34 @@
     %title The HearUs Project
     %link(rel="stylesheet" href="stylesheets/normalize.css")
     %link(rel="stylesheet" href="stylesheets/style.css")
-    %script{src: "https://www.google.com/jsapi", type: "text/javascript"}
+    %link(rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css")
+    %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans")
+    %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Vollkorn")
+    %script(src="https://www.google.com/jsapi" type="text/javascript")
     %meta{content: "authenticity_token", name: "csrf-param"}
     %meta{content: "ZeSoxgtdnhrnPW/EeD+Bg2J1jxXgjDUzvx/E4z4Bwok=", name: "csrf-token"}
   %body{class: page_classes}
     %section.container
       %header
-        %h1 HearUs
+        %a{href: "/index.html"}
+          %h1 HearUs
+        .menu-container
+          %a#menu.box-shadow-menu{href: "#"}
         %nav
-          .logbar
-            %a{} Register
-            %a{} Login
-            %a{} About
-            %a{} Mission
+          %ul
+            %li
+              %a{href: "/register.html"} Register
+            %li
+              %a{href: "/login.html"} Login
       = yield
 
       %footer
+        %nav
+          %ul
+            %li
+              %a{} About
+            %li
+              %a{} Mission
         .privacy-policy
           %span
             %a{href: "#"} privacy policy
