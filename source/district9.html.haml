@@ -1,28 +1,32 @@
-%div
+.legislators
   %ul
     %li
       %h4 Representative Janice Schakowsky
-    %li Party: Democrat
-    %li Gender: Female
+    %li 
+      %p Party: Democrat
+    %li 
+      %p Gender: Female
     / leg conditional actually needed
-    %li Phone: 202-225-2111
+    %li 
+      %p Phone: 202-225-2111
     / they may not actually have a website
     %li
       %a{href: "http://www.house.gov/schakowsky", target: "_blank"} Website
     %li
       %a{href: "http://www.house.gov/schakowsky/contact.shtml", target: "_blank"} Email Form
-    %li Address: 2367 Rayburn House Office Building
+    %li 
+      %p Address: 2367 Rayburn House Office Building
     / verified sometimes they don't have Twitter
     %li
       %a{href: "https://twitter.com/janschakowsky", target: "_blank"} Twitter Timeline
-    %form.pure-form{"accept-charset" => "UTF-8", action: "/tweets", method: "post"}
+    %form{"accept-charset" => "UTF-8", action: "/tweets", method: "post"}
       %div{style: "margin:0;padding:0;display:inline"}
         %input{name: "utf8", type: "hidden", value: "✓"}
         %input{name: "authenticity_token", type: "hidden", value: "GZCHJmwCK/knPeO5hiayOTvtiFlhZNHOnyjhLx/6QDc="}
-      %textarea#tweet{cols: "60", maxlength: "140", name: "tweet", required: "required", rows: "1"}
+      %textarea#tweet{cols: "28", rows: "3", maxlength: "140", name: "tweet", required: "required"}
         :preserve
           @janschakowsky I live in your district and vote on bills with #HearUs          
-      %input.pure-button.pure-button-primary{name: "commit", type: "submit", value: "Tweet"}
+      %input{name: "commit", type: "submit", value: "Tweet"}
     / <li><leg.bioguide_id></li>
     %li
       %a{href: "http://www.opencongress.org/wiki/Janice_Schakowsky", target: "_blank"} Wiki
@@ -32,33 +36,39 @@
     / verified sometimes they don't have Facebook
     %li
       %a{href: "https://www.facebook.com/160143957118", target: "_blank"} Facebook
-    %li Born: 26-05-1944
+    %li 
+      %p Born: 26-05-1944
     / also have access to state_id and district_id
     / end of leg conditional
+  %hr
   %ul
     %li
       %h4 Senator Richard Durbin
-    %li Party: Democrat
-    %li Gender: Male
+    %li 
+      %p Party: Democrat
+    %li 
+      %p Gender: Male
     / leg conditional actually needed
-    %li Phone: 202-224-2152
+    %li 
+      %p Phone: 202-224-2152
     / they may not actually have a website
     %li
       %a{href: "http://www.durbin.senate.gov", target: "_blank"} Website
     %li
       %a{href: "http://www.durbin.senate.gov/public/index.cfm/contact", target: "_blank"} Email Form
-    %li Address: 711 Hart Senate Office Building
+    %li 
+      %p Address: 711 Hart Senate Office Building
     / verified sometimes they don't have Twitter
     %li
       %a{href: "https://twitter.com/SenatorDurbin", target: "_blank"} Twitter Timeline
-    %form.pure-form{"accept-charset" => "UTF-8", action: "/tweets", method: "post"}
+    %form{"accept-charset" => "UTF-8", action: "/tweets", method: "post"}
       %div{style: "margin:0;padding:0;display:inline"}
         %input{name: "utf8", type: "hidden", value: "✓"}
         %input{name: "authenticity_token", type: "hidden", value: "GZCHJmwCK/knPeO5hiayOTvtiFlhZNHOnyjhLx/6QDc="}
-      %textarea#tweet{cols: "60", maxlength: "140", name: "tweet", required: "required", rows: "1"}
+      %textarea#tweet{cols: "28", rows: "3", maxlength: "140", name: "tweet", required: "required"}
         :preserve
           @SenatorDurbin I live in your district and vote on bills with #HearUs          
-      %input.pure-button.pure-button-primary{name: "commit", type: "submit", value: "Tweet"}
+      %input{name: "commit", type: "submit", value: "Tweet"}
     / <li><leg.bioguide_id></li>
     %li
       %a{href: "http://www.opencongress.org/wiki/Richard_Durbin", target: "_blank"} Wiki
@@ -68,22 +78,28 @@
     / verified sometimes they don't have Facebook
     %li
       %a{href: "https://www.facebook.com/SenatorDurbin", target: "_blank"} Facebook
-    %li Born: 21-11-1944
+    %li 
+      %p Born: 21-11-1944
     / also have access to state_id and district_id
     / end of leg conditional
+  %hr
   %ul
     %li
       %h4 Senator Mark Kirk
-    %li Party: Republican
-    %li Gender: Male
+    %li 
+      %p Party: Republican
+    %li 
+      %p Gender: Male
     / leg conditional actually needed
-    %li Phone: 202-224-2854
+    %li 
+      %p Phone: 202-224-2854
     / they may not actually have a website
     %li
       %a{href: "http://www.kirk.senate.gov", target: "_blank"} Website
     %li
       %a{href: "http://www.kirk.senate.gov/?p=contact", target: "_blank"} Email Form
-    %li Address: 524 Hart Senate Office Building
+    %li 
+      %p Address: 524 Hart Senate Office Building
     / verified sometimes they don't have Twitter
     %li
       %a{href: "https://twitter.com/senatorkirk", target: "_blank"} Twitter Timeline
@@ -91,7 +107,7 @@
       %div{style: "margin:0;padding:0;display:inline"}
         %input{name: "utf8", type: "hidden", value: "✓"}
         %input{name: "authenticity_token", type: "hidden", value: "GZCHJmwCK/knPeO5hiayOTvtiFlhZNHOnyjhLx/6QDc="}
-      %textarea#tweet{cols: "60", maxlength: "140", name: "tweet", required: "required", rows: "1"}
+      %textarea#tweet{cols: "28", rows: "3", maxlength: "140", name: "tweet", required: "required"}
         :preserve
           @senatorkirk I live in your district and vote on bills with #HearUs          
       %input.pure-button.pure-button-primary{name: "commit", type: "submit", value: "Tweet"}
@@ -104,6 +120,8 @@
     / verified sometimes they don't have Facebook
     %li
       %a{href: "https://www.facebook.com/SenatorKirk", target: "_blank"} Facebook
-    %li Born: 15-09-1959
+    %li 
+      %p Born: 15-09-1959
     / also have access to state_id and district_id
     / end of leg conditional
+  %hr
