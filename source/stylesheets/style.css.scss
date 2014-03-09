@@ -1,0 +1,234 @@
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* Base
+======================================================= */
+$darkblue: rgba(40, 27, 89, 1);
+$blue: rgba(56, 36, 115, 1);
+$white: rgba(242, 242, 242, 1);
+$red: rgba(217, 36, 20, 1);
+$lightred: rgba(95, 35, 21, 1);
+
+html, body{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  margin:0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, label { 
+  font-family: 'Vollkorn', serif;
+  font-weight: 400; 
+}
+
+::selection { background:$blue;} /* Safari */ 
+
+::-moz-selection { background: lightblue; } /* Firefox */ 
+
+a { 
+  text-decoration: none; 
+  color:#444; 
+  font-family: 'Open Sans', sans-serif;}
+
+a:hover { text-decoration: underline; }
+
+p {
+  text-align: left;
+  /*padding: 0 5%;*/
+}
+
+.open-congress{
+  display: inline-block;
+  background-color: $blue;
+  font-size: 1.25em;
+  width: 100%;
+  color: #fff;
+  letter-spacing: .075em
+}
+header {
+  width: 100%;
+  display: inline-block;
+  background-color: $red;
+  position: relative;
+  border-bottom: 1px solid #fff;
+}
+nav a {
+  color: #fff;
+}
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: .2em 0;
+  width: 100%;
+}
+
+header h1 {
+  margin:0;
+  display: inline-block;
+  float:left;
+  padding: .2em .4em;
+  color: #fff;
+}
+header li{
+  margin-top:.1em;
+  padding: .8em;
+  border-top: 1px solid #fff;
+}
+/* Menu */
+.menu-container{
+  float:right;
+  padding: 0 1.5em 0 0;
+}
+.box-shadow-menu {
+  right: 0;
+  top: .3em;
+  position: relative;
+  padding-left: 1.25em;
+/*  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
+          transform: translateY(50%);*/
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1em;
+  width: 2em;
+  height: 0.2em;
+  background: #fff;
+  box-shadow: 
+    0 0.5em 0 0 #fff,
+    0 1em 0 0 #fff;
+}
+
+header nav{
+  background-color: $red;
+  clear:both;
+  overflow: hidden;
+  line-height: 1.5em;
+  height:0;
+}
+.visible{
+  height: auto;
+}
+
+.container{
+  background-color: #fff;
+  padding: 0;
+}
+
+.page-container{
+  padding: 0 5%;
+  margin-bottom: 1.25em;
+}
+
+.hero {
+  padding: .1em;
+  /*outline: 1px solid blue;*/
+}
+.bill-search{
+  padding: 0 5%;
+}
+.search{
+  /*background-color: lightpink;*/
+  padding: 1.5em;
+}
+
+hr {
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  border: 0;
+  clear:both;
+  display: inline-block;
+  height: 1px;
+  margin-top: 1em;
+  width: 100%;
+}
+
+/* *---------->>> _FORMS <<<-----------*/
+
+label {
+  display: inline-block;
+  /*font-size: 1.25em;*/
+  width: 100%;
+  padding-left: 5%;
+  overflow: hidden;
+  /*position: absolute;*/
+  text-align: left;
+  display: none;
+}
+
+input{
+  position: relative;
+  display:inline-block;
+  width: 100%;
+  padding: .2em;
+  margin-bottom: 0;
+    &:focus {
+      outline: none;
+      border: 1px solid $darkblue; 
+    }
+}
+input[type="submit"], button{
+  margin-top: .75em;
+  margin-bottom: .5em;
+  border-radius: .25em;
+  letter-spacing: .2em;
+  padding: .2em .3em;
+  background-color: $darkblue;
+  color: #fff;
+    
+    &:focus {
+      outline: none;
+      border: 1px solid $blue;
+      background-color: $blue;
+    }
+
+    &:hover{
+      border: 1px solid $blue;
+      background-color: $darkblue;
+      opacity: .9;
+    }
+    
+    &:active{
+      background-color: $darkblue;
+    }
+}
+
+.legislators li {
+  display: inline;
+}
+
+.legislators a {
+  text-align: left;
+}
+
+.keywords li, .sources li, .legis-history li{
+  display: inline;
+}
+/* *---------->>> _FOOTER <<<-----------*/
+footer{
+  background-color:$blue;
+  opacity:.9;
+  padding: 1em 0;
+  display: none;
+}
+
+footer li {
+  display: inline-block;
+  color: #fff;
+  width: 33%;
+}
+footer a{
+  color: rgba(0,0,0,1);
+}

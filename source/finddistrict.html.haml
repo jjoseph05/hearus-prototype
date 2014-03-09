@@ -1,0 +1,86 @@
+.content
+  %p
+    We were unable to determine your district by your zipcode alone, please povide some additional information to allow us to find the district that you reside in.  Remeber that none of the data that you enter is saved, please read our
+    %a{href: "#"} Privacy Policy
+    for more information about how we treat your data.
+  %form{"accept-charset" => "UTF-8", action: "/district9.html", method: "post"}
+    %div{style: "margin:0;padding:0;display:inline"}
+      %input{name: "utf8", type: "hidden", value: "✓"}
+      %input{name: "authenticity_token", type: "hidden", value: "GZCHJmwCK/knPeO5hiayOTvtiFlhZNHOnyjhLx/6QDc="}
+    %label{for: "address"}
+    %input#address{autofocus: "autofocus", name: "address", placeholder: "Street Address", type: "text"}
+    %label{for: "city"}
+    %input#city{name: "city", placeholder: "City", required: "required", type: "text"}
+    %label{for: "state"}
+    %select#state-select{name: "state", required: "required"}
+      %option{value: ""} Choose a state
+      %option{value: "AK"} AK
+      %option{value: "AL"} AL
+      %option{value: "AR"} AR
+      %option{value: "AZ"} AZ
+      %option{value: "CA"} CA
+      %option{value: "CO"} CO
+      %option{value: "CT"} CT
+      %option{value: "DC"} DC
+      %option{value: "DE"} DE
+      %option{value: "FL"} FL
+      %option{value: "GA"} GA
+      %option{value: "HI"} HI
+      %option{value: "IA"} IA
+      %option{value: "ID"} ID
+      %option{value: "IL"} IL
+      %option{value: "IN"} IN
+      %option{value: "KS"} KS
+      %option{value: "KY"} KY
+      %option{value: "LA"} LA
+      %option{value: "MA"} MA
+      %option{value: "MD"} MD
+      %option{value: "ME"} ME
+      %option{value: "MI"} MI
+      %option{value: "MN"} MN
+      %option{value: "MO"} MO
+      %option{value: "MS"} MS
+      %option{value: "MT"} MT
+      %option{value: "NC"} NC
+      %option{value: "ND"} ND
+      %option{value: "NE"} NE
+      %option{value: "NH"} NH
+      %option{value: "NJ"} NJ
+      %option{value: "NM"} NM
+      %option{value: "NV"} NV
+      %option{value: "NY"} NY
+      %option{value: "OH"} OH
+      %option{value: "OK"} OK
+      %option{value: "OR"} OR
+      %option{value: "PA"} PA
+      %option{value: "RI"} RI
+      %option{value: "SC"} SC
+      %option{value: "SD"} SD
+      %option{value: "TN"} TN
+      %option{value: "TX"} TX
+      %option{value: "UT"} UT
+      %option{value: "VA"} VA
+      %option{value: "VT"} VT
+      %option{value: "WA"} WA
+      %option{value: "WI"} WI
+      %option{value: "WV"} WV
+      %option{value: "WY"} WY
+    %input{name: "commit", type: "submit", value: "Go"}
+  %form{"accept-charset" => "UTF-8", action: "/district9.html", method: "post"}
+    %div{style: "margin:0;padding:0;display:inline"}
+      %input{name: "utf8", type: "hidden", value: "✓"}
+      %input{name: "authenticity_token", type: "hidden", value: "GZCHJmwCK/knPeO5hiayOTvtiFlhZNHOnyjhLx/6QDc="}
+    %label{for: "zipcode"}
+    %input#Zipcode{name: "Zipcode", placeholder: "Zipcode", required: "required", type: "text"}
+    %label{for: "plus_four"}
+    %input#plus_four{name: "plus_four", placeholder: "+ 4", required: "required", type: "text"}
+    %input{name: "commit", type: "submit", value: "Find District"}
+  #latlng
+    %p
+      %button{onclick: "geoLocate()"} Find my location
+  %p
+    With your permission, we can auto-detect location for you.
+    %br
+    Your location data will not be recorded by the site in any way.  Enter your address and find your local representative.
+    %br
+    We respect privacy (link_to privacy_path).
