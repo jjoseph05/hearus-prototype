@@ -4,9 +4,10 @@
   %form{action: "/bills.html"}
     %label{for: "search"}
     %input{autofocus: "autofocus", placeholder: "Find an Issue", type: "text"}
-    %button{type: "submit", value: "Search"}
+    %button.search-icon{type: "submit"}
+    / %button{type: "submit", value: "Search"}
 .search.zipcodes
   %form{action: "/finddistrict.html"}
     %label{for: "zipcode"}
     %input{maxlength: "5", name: "zipcode", pattern: "[0-9]{5}", placeholder: "Zip Code", size: "12", type: "text"}
-    %button{name: "commit", type: "submit", value: "Go"}
+    %button.search-icon{name: "commit", type: "submit"}
