@@ -4,16 +4,17 @@
     %title The HearUs Project
     %link(rel="stylesheet" href="stylesheets/normalize.css")
     %link(rel="stylesheet" href="stylesheets/style.css")
-    %link(rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css")
-    %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans")
-    %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Vollkorn")
+    / %link(rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css")
+    / %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans")
+    / %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Vollkorn")
+    %link{href: "javascripts/sidr/stylesheets/jquery.sidr.dark.css", rel: "stylesheet"}
     %script(type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js")
     %script(src="javascripts/all.js" type="text/javascript")
     %meta{content: "authenticity_token", name: "csrf-param"}
     %meta{content: "ZeSoxgtdnhrnPW/EeD+Bg2J1jxXgjDUzvx/E4z4Bwok=", name: "csrf-token"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
   %body{class: page_classes}
-    %section.container
+    %section
       %header
         %a{href: "/index.html"}
           %h1 HearUs
@@ -25,7 +26,7 @@
               %a{href: "/register.html"} Register
             %li
               %a{href: "/login.html"} Login
-      .page-container
+      .container
         = yield
 
       %footer

@@ -34,7 +34,7 @@ video {
 
 /*
  * Prevents modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
+ * emove excess height in iOS 5 devices.
  */
 
 audio:not([controls]) {
@@ -67,7 +67,7 @@ html {
 }
 
 /*
- * Removes default margin.
+ * emoves default margin.
  */
 
 body {
@@ -206,7 +206,7 @@ sub {
    ========================================================================== */
 
 /*
- * Removes border when inside `a` element in IE 8/9.
+ * emoves border when inside `a` element in IE 8/9.
  */
 
 img {
@@ -249,7 +249,7 @@ fieldset {
 
 /*
  * 1. Corrects color not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 2. emove padding so people aren't caught out if they zero out fieldsets.
  */
 
 legend {
@@ -309,7 +309,7 @@ input[disabled] {
 
 /*
  * 1. Addresses box sizing set to `content-box` in IE 8/9.
- * 2. Removes excess padding in IE 8/9.
+ * 2. emoves excess padding in IE 8/9.
  */
 
 input[type="checkbox"],
@@ -332,7 +332,7 @@ input[type="search"] {
 }
 
 /*
- * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * emoves inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
 
@@ -342,7 +342,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /*
- * Removes inner padding and border in Firefox 4+.
+ * emoves inner padding and border in Firefox 4+.
  */
 
 button::-moz-focus-inner,
@@ -352,7 +352,7 @@ input::-moz-focus-inner {
 }
 
 /*
- * 1. Removes default vertical scrollbar in IE 8/9.
+ * 1. emoves default vertical scrollbar in IE 8/9.
  * 2. Improves readability and alignment in all browsers.
  */
 
@@ -366,7 +366,7 @@ textarea {
    ========================================================================== */
 
 /*
- * Remove most spacing between table cells.
+ * emove most spacing between table cells.
  */
 
 table {

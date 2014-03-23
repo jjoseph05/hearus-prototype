@@ -13,58 +13,40 @@ $white: rgba(242, 242, 242, 1);
 $red: rgba(217, 36, 20, 1);
 $lightred: rgba(95, 35, 21, 1);
 
-html, body{
-  text-align: center;
+html{
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-  width: 100%;
-  margin:0 auto;
-}
-
-h1, h2, h3, h4, h5, h6, label { 
-  font-family: 'Vollkorn', serif;
+  font-size: 100%/1.5;
   font-weight: 400; 
+} 
+
+@media (min-width: 40em) {
+  html { font-size: 112%; }
 }
 
-::selection { background:$blue;} /* Safari */ 
-
-::-moz-selection { background: lightblue; } /* Firefox */ 
-
-a { 
-  text-decoration: none; 
-  color:#444; 
-  font-family: 'Open Sans', sans-serif;}
-
-a:hover { text-decoration: underline; }
-
-p {
-  text-align: left;
-  /*padding: 0 5%;*/
+@media (min-width: 64em) {
+  html { font-size: 120%; }
 }
 
-.open-congress{
-  display: inline-block;
-  background-color: $blue;
-  font-size: 1.25em;
-  width: 100%;
-  color: #fff;
-  letter-spacing: .075em
+body {
+  text-align: center;
+  background-color: #fff;
 }
+
+.container {
+  margin:0 auto;
+  width: 90%;
+  max-width: 32em;
+}
+
+/* Header */
+/*======================================================= */
+
 header {
   width: 100%;
   display: inline-block;
   background-color: $red;
   position: relative;
   border-bottom: 1px solid #fff;
-}
-nav a {
-  color: #fff;
-}
-ul, li {
-  list-style-type: none;
-  margin: 0;
-  padding: .2em 0;
-  width: 100%;
 }
 
 header h1 {
@@ -74,27 +56,112 @@ header h1 {
   padding: .2em .4em;
   color: #fff;
 }
-header li{
+
+header li {
   margin-top:.1em;
   padding: .8em;
   border-top: 1px solid #fff;
 }
+
+
+/* Mobile First Grid */
+/*======================================================= */
+
+
+.column { margin-bottom: 1.5em; }
+
+@media (min-width: 40em) {
+  .column {
+    float: left;
+    margin: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 24.95%; }
+  .column.flow-opposite { float: right; }
+}
+
+/* Typography */
+/*======================================================= */
+
+h1, h2, h3, h4, h5, h6, label { 
+  font-family: 'Vollkorn', serif;
+  font-weight: 400; 
+}
+
+::selection { 
+  background: $blue;
+} /* Safari */ 
+
+::-moz-selection { 
+  background: lightblue;
+} /* Firefox */ 
+
+/* Lists */
+/*======================================================= */
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: .2em 0;
+  width: 100%;
+}
+
+
+/* Links */
+/*======================================================= */
+
+nav a {
+  color: #fff;
+}
+
+a { 
+  text-decoration: none; 
+  color: #444; 
+  /*font-family: 'Open Sans', sans-serif;*/
+}
+
+
+
+/*
+a:hover { text-decoration: underline; }
+*/
+/*p {
+  text-align: left;
+}
+*/
+/*
+.open-congress{
+  display: inline-block;
+  background-color: $blue;
+  font-size: 1.25em;
+  width: 100%;
+  color: #fff;
+  letter-spacing: .075em
+}*/
+
+
+
 /* Menu */
-.menu-container{
+/*======================================================= */
+
+.menu-container {
   float:right;
   padding: 0 1.5em 0 0;
 }
+
 .box-shadow-menu {
   right: 0;
   top: .3em;
   position: relative;
   padding-left: 1.25em;
-/*  -webkit-transform: translateY(50%);
-     -moz-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-       -o-transform: translateY(50%);
-          transform: translateY(50%);*/
 }
+
 .box-shadow-menu:before {
   content: "";
   position: absolute;
@@ -108,45 +175,26 @@ header li{
     0 1em 0 0 #fff;
 }
 
-header nav{
+/* Menu Hide/Show */
+/*======================================================= */
+
+header nav {
   background-color: $red;
   clear:both;
   overflow: hidden;
   line-height: 1.5em;
   height:0;
 }
-.visible{
+
+.visible {
   height: auto;
 }
 
-.container{
-  background-color: #fff;
-  padding: 0;
-}
-
-.page-container{
-  padding: 0 5%;
-  margin-bottom: 1.25em;
-}
-
-.hero {
-  padding: .1em;
-  /*outline: 1px solid blue;*/
-}
-.bill-search{
-  padding: 0 5%;
-}
-.search{
-  /*background-color: lightpink;*/
-  padding: 1.5em;
-  width: 100%;
-}
 
 
-button{
-  width: 2em;
-  height: 2em;
-}
+/* Elements */
+/*======================================================= */
+
 
 hr {
   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
@@ -161,20 +209,31 @@ hr {
   width: 100%;
 }
 
+
 /* *---------->>> _FORMS <<<-----------*/
+/*======================================================= */
+
+
+.hero {
+  padding: .1em;
+}
+
+.search {
+  padding: 1.5em;
+  width: 100%;
+}
 
 label {
   display: inline-block;
-  /*font-size: 1.25em;*/
   width: 100%;
   padding-left: 5%;
   overflow: hidden;
-  /*position: absolute;*/
   text-align: left;
   display: none;
 }
 
 input {
+  font-size: 1.25em;
   position: relative;
   display:inline-block;
   width: 80%;
@@ -185,6 +244,12 @@ input {
       border: 1px solid $darkblue; 
     }
 }
+
+
+/* Buttons */
+/*======================================================= */
+
+
 input[type="submit"], button{
   margin-top: .75em;
   margin-bottom: .5em;
@@ -211,6 +276,14 @@ input[type="submit"], button{
     }
 }
 
+
+button {
+  width: 2em;
+  height: 2em;
+}
+
+
+/*
 .legislators li {
   display: inline;
 }
@@ -222,8 +295,11 @@ input[type="submit"], button{
 .keywords li, .sources li, .legis-history li{
   display: inline;
 }
+*/
 
 /* *---------->>> _FOOTER <<<-----------*/
+/*======================================================= */
+
 footer{
   background-color:$blue;
   opacity:.9;
@@ -239,3 +315,14 @@ footer li {
 footer a{
   color: rgba(0,0,0,1);
 }
+
+/* Clearfix by Nicolas Gallagher */
+/*======================================================= */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
