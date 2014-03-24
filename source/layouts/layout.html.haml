@@ -23,20 +23,24 @@
           %a#right-menu.drawer{href: "#right-menu"}
           #sidr-right
             %ul
-              %li.active
+              %li
                 %a{href: "/register.html"} Register
               %li
                 %a{href: "/login.html"} Login
+              %li
+                %a{} About
+              %li
+                %a{} Mission
       .container
         = yield
 
       %footer
-        %nav
-          %ul
-            %li
-              %a{} About
-            %li
-              %a{} Mission
+        / %nav
+        /   %ul
+        /     %li
+        /       %a{} About
+        /     %li
+        /       %a{} Mission
         / .privacy-policy
         /   %span
         /     %a{href: "#"} privacy policy
