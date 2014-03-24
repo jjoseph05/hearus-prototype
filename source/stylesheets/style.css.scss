@@ -348,9 +348,27 @@ button {
 }
 
 
+.profile-pic{
+  background-color: lightgray;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin: 0 .75em 1em 0;
+  float: left;
+}
+
 .legislators li {
   display: inline;
 }
+
+.legislators p{
+  margin: 0;
+  float: left;
+  display: inline-block;
+  padding: 0 .2em .3em 0;
+}
+
 
 .legislators a {
   text-align: left;
@@ -364,9 +382,6 @@ button {
   background-color: rgba(210, 210, 210, .8);
   border-radius: .25em;
   padding: .2em 0;
-  &:input{
-    margin: .2em 0;
-  }
 }
 
 
@@ -387,6 +402,9 @@ footer li {
 }
 footer a{
   color: rgba(0,0,0,1);
+}
+.clear {
+  clear: both;
 }
 
 /* Clearfix by Nicolas Gallagher */
