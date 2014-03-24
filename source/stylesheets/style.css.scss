@@ -39,9 +39,9 @@ header {
   width: 100%;
   display: inline-block;
   background-color: $red;
-  position: fixed;
+/*  position: fixed;
   top: 0;
-  left: 0;
+  left: 0;*/
   border-bottom: 1px solid #fff;
   z-index: 1;
 }
@@ -64,9 +64,10 @@ header li {
   margin:0 auto;
   width: 90%;
   max-width: 32em;
-  position: relative;
-  top: 4em;
+  /*position: relative;
+  top: 4em;*/
   z-index: 0;
+  padding-top:5%;
 }
 
 .drawer {
@@ -88,7 +89,7 @@ corresponding value from the list below*/
   padding: 0.15em .25em .15em .25em;
   position: absolute;
   top: 10px;
-  right: 0;
+  left: 2em;
   border-radius: .1em;
   background-color: rgba(190,190,190,1);
   text-decoration: none;
@@ -285,8 +286,6 @@ input {
 
 .search-icon {
   position: relative;
-  display: inline-block;
-  /*width: 10%;*/
 }
  
 /*replace the content value with the 
@@ -308,7 +307,7 @@ corresponding value from the list below*/
   left: 0;*/
   padding: .35em;
   border-radius: .1em;
-  background-color: rgba(190,190,190,1);
+  background-color: rgba(255,255,255,0);
   z-index: 2;
 }
 
@@ -320,7 +319,8 @@ input[type="submit"] {
   padding: .2em .3em;
   background-color: $darkblue;
   color: #fff;
-    
+  border: 1px solid lightgrey;
+
     &:focus {
       outline: none;
       border: 1px solid $blue;
@@ -329,22 +329,38 @@ input[type="submit"] {
 
     &:hover{
       border: 1px solid $blue;
-      background-color: $darkblue;
+      background-color: $red;
       opacity: .9;
     }
     
     &:active{
-      background-color: $darkblue;
+      background-color: $red;
     }
 }
 
 
-button {
+.search button {
   width: 2.25em;
-  height: 2.25em;
-  padding: 0;
+  padding: .5em 0 .3em 0;
   z-index: 1;
   background-color: rgba(0,0,0,0);
+  right: .3em;
+
+    &:focus{
+      outline: none;
+      border: 1px solid $blue;
+    }
+
+    &:hover{
+      outline: none;
+      background-color: $blue;
+    }
+
+    &:active{
+      outline: none;
+      background-color: $red;
+    }
+
 }
 
 
